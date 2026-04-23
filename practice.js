@@ -113,16 +113,16 @@ console.log("Hello! Nazuk Kabra");
 // let body=document.querySelector("body");
 // body.after(newbtn);
 
-let btn=document.querySelector("#toggle");
-let idx=0;
-btn.addEventListener("click",() => {
-    if(idx%2==0){
-        document.body.style.backgroundColor="black";
-        console.log("Clicked! and Mode is: Dark");
-    }
-    else{
-        document.body.style.backgroundColor="white";
-        console.log("Clicked!Mode is:White");
-    }
-    idx++;
-})
+// let btn=document.querySelector("#toggle");
+// let idx=0;
+// btn.addEventListener("click",() => {
+//     if(idx%2==0){
+//         document.body.style.backgroundColor="black";
+//         console.log("Clicked! and Mode is: Dark");
+//     }
+//     else{
+//         document.body.style.backgroundColor="white";
+//         console.log("Clicked!Mode is:White");
+//     }
+//     idx++;
+// })
