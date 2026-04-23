@@ -1,5 +1,6 @@
 let boxes=document.querySelectorAll(".box");
 let resbtn=document.querySelector(".reset");
+let resbtn1=document.querySelector(".reset1");
 let turn0=true; //playerX(X) and playerY(O)
 let msg=document.querySelector(".msg");
 let msg_text=document.querySelector(".msg_text");
@@ -12,11 +13,13 @@ for(let btn of boxes){
             turn0=false;
             btn.classList.add("box");
             btn.innerText="O";
+            btn.classList.add("Ocolor");
         }
         else{
             turn0=true;
             btn.classList.add("box");
             btn.innerText="X";
+            btn.classList.add("Xcolor");
         }
         btn.disabled=true;
         checkwinner();
@@ -31,6 +34,7 @@ const enableboxes=()=>{
     for(let btns of boxes){
         btns.disabled=false;
         btns.innerText=""
+        btns.classList.remove("Ocolor", "Xcolor");
     }
 }
 // let c=0;
@@ -60,9 +64,10 @@ const checkwinner=()=>{
         msg.classList.remove("hide");
     }
 }
-
-resbtn.addEventListener("click",()=>{
+const resetgame=()=>{
     turn0=true;
     enableboxes();
     msg.classList.add("hide");
-})
+}
+resbtn.addEventListener("click",resetgame);
+resbtn1.addEventListener("click",resetgame);

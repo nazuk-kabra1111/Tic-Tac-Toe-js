@@ -30,12 +30,27 @@ h1{
     font-size: 40px;
     box-shadow: 0 0 1 rem rgba(0,200,0,0.7);
 }
+.Ocolor{
+    background-color: aquamarine;
+}
+.Xcolor{
+    background-color: aqua;
+}
 .reset{
     background-color: black;
     color:white;
     height:40px;
     width:80px;
     border: 2px solid black;
+    border-radius: 5px;
+    font-size:large
+}
+.reset1{
+    background-color: black;
+    color:white;
+    height:40px;
+    width:80px;
+    /* border: 2px solid black; */
     border-radius: 5px;
     font-size:large
 }
