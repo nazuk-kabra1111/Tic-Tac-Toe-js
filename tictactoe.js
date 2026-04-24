@@ -44,12 +44,14 @@ const showwinner=(winner)=>{
     disableboxes();
 }
 const checkwinner=()=>{
+    let h=0;
     for(let arr of winningpatterns){
         let val1=boxes[arr[0]].innerText;
         let val2=boxes[arr[1]].innerText;
         let val3=boxes[arr[2]].innerText;
         if(val1!="" && val2!="" && val3!="" && val1===val2 && val2===val3){
             // console.log(`${boxes[arr[0]].innerText} is winner`)
+            h=1;
             showwinner(val1);
         }
     }
@@ -59,7 +61,7 @@ const checkwinner=()=>{
             k=1;
         }
     }
-    if(k===0){
+    if(k===0 && h===0){
         msg_text.innerText="TIE";
         msg.classList.remove("hide");
     }
